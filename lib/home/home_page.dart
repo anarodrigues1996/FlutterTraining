@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_teste/home/components/todo_widget.dart';
+import 'package:flutter_teste/home/home_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,22 +12,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final controller = HomeController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),),
-
+        title: const Text('Home'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(18),
         child: Column(children: [
           const Text("Home Page"),
-          ToDoWidget(valorTexto: "qlql coisa 1"),
-          ToDoWidget(valorTexto: "qlql coisa 2"),
-          ToDoWidget(valorTexto: "qlql coisa 3"),
+          for (int i = 0; i < controller.minhasTarefas.length; i++) ToDoWidget(valorTexto: controller.minhasTarefas[i]),
         ]),
       ),
-
     );
   }
 }
