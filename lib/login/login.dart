@@ -22,12 +22,12 @@ class _LoginPageState extends State<LoginPage> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: _page(),
+        body: _page(context),
       ),
     );
   }
 
-  Widget _page() {
+  Widget _page(BuildContext context) {
     return Center(
       child: Padding(
         padding: const EdgeInsets.only(top: 40, bottom: 40),
@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                   ElevatedButton(
                       onPressed: () {
                         controller.Login(
-                            usernameController.text, passwordController.text);
+                          usernameController.text, passwordController.text, context);
                       },
                       child: const Text('Entrar'))
                 ],
