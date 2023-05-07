@@ -39,18 +39,28 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // ignore: avoid_unnecessary_containers
+    
                   const Text("Login", style: TextStyle(fontSize: 30)),
+                  Container(
+                    height: 20,
+                  ),
                   const SizedBox(height: 50),
                   _inputField("Username", usernameController),
                   const SizedBox(height: 20),
                   _inputField("Password", passwordController, isPassword: true),
                   const SizedBox(height: 50),
                   ElevatedButton(
-                      onPressed: () {
-                        controller.Login(
-                          usernameController.text, passwordController.text, context);
-                      },
-                      child: const Text('Entrar'))
+                    onPressed: () {
+                      controller.Login(usernameController.text,
+                          passwordController.text, context);
+                    },
+                    // ignore: sized_box_for_whitespace
+                    child: const Text(
+                      'Entrar',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ],
               ),
             ),

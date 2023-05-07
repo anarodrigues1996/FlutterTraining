@@ -9,7 +9,6 @@ class ToDoWidget extends StatelessWidget {
     return const Card(
       child: Padding(
         padding: EdgeInsets.all(8.0),
-        child: Text('QLQLR COISA'),
       ),
     );
   }
