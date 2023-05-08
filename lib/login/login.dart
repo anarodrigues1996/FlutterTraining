@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_teste/login/login_controller.dart';
+import 'package:flutter_teste/shared/components/my_input.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -46,9 +47,9 @@ class _LoginPageState extends State<LoginPage> {
                     height: 20,
                   ),
                   const SizedBox(height: 50),
-                  _inputField("Username", usernameController),
+                  MyInput(hintText:"Username", controller: usernameController, ),
                   const SizedBox(height: 20),
-                  _inputField("Password", passwordController, isPassword: true),
+                  MyInput(hintText: "Password", controller: passwordController, isPassword: true),
                   const SizedBox(height: 50),
                   ElevatedButton(
                     onPressed: () {
@@ -67,24 +68,6 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _inputField(String hintText, TextEditingController controller,
-      {isPassword = false}) {
-    var border = OutlineInputBorder(
-        borderRadius: BorderRadius.circular(18),
-        borderSide: const BorderSide(color: Colors.black));
-    return TextField(
-      style: const TextStyle(color: Colors.black),
-      controller: controller,
-      decoration: InputDecoration(
-        hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.black),
-        enabledBorder: border,
-        focusedBorder: border,
-      ),
-      obscureText: isPassword,
     );
   }
 }
