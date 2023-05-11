@@ -1,14 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class LoginController {
+class SignUpController {
   // ignore: non_constant_identifier_names
-  void Login(String email, String password, BuildContext context) {
+  void Signup(String email, String nome, String morada, int aniversario,
+      String password, BuildContext context) {
     if (kDebugMode) {
+      print(nome);
+      print(morada);
+      print(aniversario);
       print(email);
       print(password);
     }
-    if(email == "admin@gmail.com" && password == '123') {
+    if (email == "admin" && password == '123') {
       Navigator.of(context).pushReplacementNamed('/home');
     }
   }
