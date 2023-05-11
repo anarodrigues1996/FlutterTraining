@@ -7,9 +7,13 @@ class ToDoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Text(valorTexto),
+      child: SizedBox(
+        width: 300,
+        height: 100,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(valorTexto),
+        ),
       ),
     );
   }

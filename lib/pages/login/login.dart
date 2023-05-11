@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_teste/login/login_controller.dart';
+import 'package:flutter_teste/pages/login/login_controller.dart';
 import 'package:flutter_teste/shared/components/my_input.dart';
 
 class LoginPage extends StatefulWidget {
@@ -40,26 +40,29 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ignore: avoid_unnecessary_containers
-    
                   const Text("Login", style: TextStyle(fontSize: 30)),
                   Container(
                     height: 20,
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   MyInput(hintText:"Username", controller: usernameController, ),
                   const SizedBox(height: 20),
                   MyInput(hintText: "Password", controller: passwordController, isPassword: true),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
+                  const Text('Nao tens uma conta? Clique aqui', style: TextStyle(fontSize: 10), textAlign: TextAlign.start,),
+                  const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
                       controller.Login(usernameController.text,
                           passwordController.text, context);
                     },
                     // ignore: sized_box_for_whitespace
-                    child: const Text(
-                      'Entrar',
-                      textAlign: TextAlign.center,
+                    child: Container(
+                      width: double.infinity,
+                      child: const Text(
+                        'Entrar',
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ],
