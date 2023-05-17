@@ -60,18 +60,18 @@ class _LoginPageState extends State<LoginPage> {
                       controller: passwordController,
                       isPassword: true),
                   const SizedBox(height: 10),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Forgot Password?',
-                          style: TextStyle(fontSize: 10, color: Colors.blue, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
+                  // const Padding(
+                  //   padding: EdgeInsets.symmetric(horizontal: 25),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.end,
+                  //     children: [
+                  //       Text(
+                  //         'Forgot Password?',
+                  //         style: TextStyle(fontSize: 10, color: Colors.blue, fontWeight: FontWeight.bold),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   const SizedBox(height: 10),
                   SizedBox(
                     width: 200,

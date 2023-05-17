@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_teste/pages/boostrap/form_bs.dart';
 import 'package:flutter_teste/pages/home/home_page.dart';
 import 'package:flutter_teste/pages/login/login.dart';
 import 'package:flutter_teste/pages/signUp/signup.dart';
+import 'package:flutter_teste/pages/modal/modal_bs.dart';
+import 'package:flutter_teste/pages/table/table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +26,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login':(context) => const LoginPage(),
         '/home':(context) => const HomePage(),
-        '/':(context) => const SignUpPage(),
+        '/signup':(context) => const SignUpPage(),
+        '/form':(context) => const FormBootStrap(),
+        '/modal':(context) => const ModalPage(),
+        '/':(context) => const TablePage(),
       },
     );
   }
