@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class TablePage extends StatefulWidget {
   const TablePage({super.key});
@@ -12,50 +10,36 @@ class TablePage extends StatefulWidget {
 class _TablePageState extends State<TablePage> {
   @override
   Widget build(BuildContext context) {
-    return  Center(
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Table(
-          border: TableBorder.all(color:Colors.black),
-          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-          children: const [
-             TableRow(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              children: [
-               
-                TableCell(
-                  verticalAlignment: TableCellVerticalAlignment.middle,
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Text('Nome'),
-                  ),
-
-                ),
-                 TableCell(
-                  verticalAlignment: TableCellVerticalAlignment.middle,
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Text('Tarefas'),
-                  ),
-
-                ),
-                 TableCell(
-                  verticalAlignment: TableCellVerticalAlignment.middle,
-                  child: Padding(
-                    padding: EdgeInsets.all(4),
-                    child: Text('Estado'),
-                  ),
-
-                )
-              ]
+    TableRow tableRow = const TableRow(children: [
+      Padding(
+        padding: EdgeInsets.all(10),
+        child: Text('Nome'),
+      ),
+      Padding(
+        padding: EdgeInsets.all(10),
+        child: Text('Tarefas'),
+      ),
+      Padding(
+        padding: EdgeInsets.all(10),
+        child: Text('Estado'),
+      ),
+    ]);
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Table'),
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: SizedBox(
+              child: Table(border: TableBorder.all(), children: [
+                tableRow,
+                tableRow,
+                tableRow,
+                tableRow,
+              ]),
             ),
-          
-          ],
-        ),
-        ),
-        
-    );
+          ),
+        ));
   }
 }
