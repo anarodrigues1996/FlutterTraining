@@ -49,35 +49,35 @@ class _SignUpPageState extends State<SignUpPage> {
                   TextField(
                     controller: nameController,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.person_2_rounded),
+                      icon: Icon(Icons.person_2_rounded, color: Colors.blue,),
                       labelText: 'Nome'
                     )
                   ),
                    TextField(
-                    controller: nameController,
+                    controller: emailController,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.email_rounded),
+                      icon: Icon(Icons.email_rounded, color: Colors.blue,),
                       labelText: 'email'
                     )
                   ),
                   TextField(
-                    controller: nameController,
+                    controller: passwordController,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.lock_rounded),
+                      icon: Icon(Icons.lock_rounded, color: Colors.blue,),
                       labelText: 'Password'
                     )
                   ),
                    TextField(
-                    controller: nameController,
+                    controller: moradaController,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.location_city),
+                      icon: Icon(Icons.location_city, color: Colors.blue,),
                       labelText: 'Morada'
                     )
                   ),
                    TextField(
-                    controller: nameController,
+                    controller: aniversarioController,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.calendar_today_rounded),
+                      icon: Icon(Icons.calendar_today_rounded, color: Colors.blue,),
                       labelText: 'Aniversario',
                     ),
                     onTap: () async {

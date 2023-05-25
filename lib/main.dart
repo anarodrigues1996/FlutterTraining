@@ -27,11 +27,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login':(context) => const LoginPage(),
         '/home':(context) => const HomePage(),
-        '/signup':(context) => const SignUpPage(),
+        '/':(context) => const SignUpPage(),
         '/form':(context) => const FormBootStrap(),
         '/modal':(context) => const ModalPage(),
         '/table':(context) => const TablePage(),
-        '/':(context) => const DataPicker(),
+        '/datapicker':(context) => const DataPicker(),
       },
     );
   }
