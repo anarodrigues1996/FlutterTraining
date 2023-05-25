@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_teste/pages/home/components/todo_widget.dart';
+import 'package:flutter_teste/components/todo_widget.dart';
 import 'package:flutter_teste/pages/home/home_controller.dart';
 
 class HomePage extends StatefulWidget {

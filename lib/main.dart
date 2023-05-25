@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_teste/pages/boostrap/form_bs.dart';
+import 'package:flutter_teste/pages/datapicker/datapicker.dart';
 import 'package:flutter_teste/pages/home/home_page.dart';
 import 'package:flutter_teste/pages/login/login.dart';
 import 'package:flutter_teste/pages/signUp/signup.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         '/signup':(context) => const SignUpPage(),
         '/form':(context) => const FormBootStrap(),
         '/modal':(context) => const ModalPage(),
-        '/':(context) => const TablePage(),
+        '/table':(context) => const TablePage(),
+        '/':(context) => const DataPicker(),
       },
     );
   }

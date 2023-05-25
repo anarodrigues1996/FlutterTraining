@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_teste/shared/components/my_input.dart';
+import 'package:intl/intl.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -40,40 +41,59 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  //  const Icon(
-                  //   Icons.person,
-                  //   size: 80,
-                  //   color: Colors.blue,
-                  // ),
                   const Text("Registo", style: TextStyle(fontSize: 30)),
                   Container(
                     height: 20,
                   ),
                   const SizedBox(height: 10),
-                  MyInput(
-                    hintText: "Nome",
+                  TextField(
                     controller: nameController,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.person_2_rounded),
+                      labelText: 'Nome'
+                    )
                   ),
-                  const SizedBox(height: 10),
-                  MyInput(
-                    hintText: "Morada",
-                    controller: moradaController,
+                   TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.email_rounded),
+                      labelText: 'email'
+                    )
                   ),
-                  const SizedBox(height: 10),
-                  MyInput(
-                    hintText: "Aniversario",
-                    controller: aniversarioController,
+                  TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.lock_rounded),
+                      labelText: 'Password'
+                    )
                   ),
-                  const SizedBox(height: 10),
-                  MyInput(
-                    hintText: "Email",
-                    controller: emailController,
+                   TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.location_city),
+                      labelText: 'Morada'
+                    )
                   ),
-                  const SizedBox(height: 10),
-                  MyInput(
-                      hintText: "Password",
-                      controller: passwordController,
-                      isPassword: true),
+                   TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.calendar_today_rounded),
+                      labelText: 'Aniversario',
+                    ),
+                    onTap: () async {
+            DateTime? pickeddate = await showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(1460),
+                lastDate: DateTime(2100));
+
+            if (pickeddate != null) {
+              setState(() {
+                aniversarioController.text=DateFormat('dd-MM-yyyy').format(pickeddate);
+              });
+            }
+          },
+                  ),
                   const SizedBox(height: 10),
                   SizedBox(
                     width: 200,

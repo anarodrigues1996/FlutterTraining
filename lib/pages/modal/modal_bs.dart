@@ -30,6 +30,7 @@ class _ModalPageState extends State<ModalPage> {
                         content: Text('Estou bem!')
                         );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      Navigator.of(context).pop();
                       },
                       child: const Text('Sim')),
                   TextButton(onPressed: () {
@@ -37,13 +38,17 @@ class _ModalPageState extends State<ModalPage> {
                         content: Text('Estou mal!'),
                        );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      Navigator.of(context).pop();
                   }, 
                   child: const Text('Nao')),
                 ],
               ),
             );
+            
           },
+          
         ),
+        
       ),
     );
   }
