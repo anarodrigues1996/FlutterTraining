@@ -12,15 +12,15 @@ class _TablePageState extends State<TablePage> {
   Widget build(BuildContext context) {
     TableRow tableRow = const TableRow(children: [
       Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         child: Text('Nome'),
       ),
       Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         child: Text('Tarefas'),
       ),
       Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         child: Text('Estado'),
       ),
     ]);
@@ -28,7 +28,8 @@ class _TablePageState extends State<TablePage> {
         appBar: AppBar(
           title: const Text('Table'),
         ),
-        body: Center(
+       
+        body: Container(
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: SizedBox(
