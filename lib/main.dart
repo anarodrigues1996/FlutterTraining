@@ -1,3 +1,4 @@
+import 'package:flutter_teste/pages/Dio/apiRequest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_teste/pages/boostrap/form_bs.dart';
 import 'package:flutter_teste/pages/datapicker/datapicker.dart';
@@ -18,22 +19,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false ,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-      ), 
+      ),
       initialRoute: '/',
       routes: {
-        '/login':(context) => const LoginPage(),
-        '/home':(context) => const HomePage(),
-        '/':(context) => const SignUpPage(),
-        '/form':(context) => const FormBootStrap(),
-        '/modal':(context) => const ModalPage(),
-        '/table':(context) => const TablePage(),
-        '/datapicker':(context) => const DataPicker(),
+        '/login': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
+        '/signup': (context) => const SignUpPage(),
+        '/form': (context) => const FormBootStrap(),
+        '/modal': (context) => const ModalPage(),
+        '/table': (context) => const TablePage(),
+        '/datapicker': (context) => const DataPicker(),
+        '/': (context) => const ApiRequest(),
       },
     );
   }
 }
-

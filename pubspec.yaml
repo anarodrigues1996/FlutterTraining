@@ -39,6 +39,7 @@ dependencies:
   intl: ^0.18.1
   flutter_bootstrap: "^2.0.0"
   flutter_widget_from_html: ^0.6.0
+  dio: ^5.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
