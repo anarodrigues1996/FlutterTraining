@@ -42,6 +42,7 @@ class _ApiRequest extends State<ApiRequest> {
           title: const Text('Request API'),
         ),
         body: ListView.builder(
+          // ignore: unnecessary_null_comparison
           itemCount: jsonList == null ? 0 : jsonList.length,
           itemBuilder: (BuildContext context, int index) {
             return Card(
